@@ -8,7 +8,9 @@
 
 ![cooperacao-agentes](assets/support/project-en-us.svg)
 
-[![MIT](https://img.shields.io/github/license/Rdraim/cooperacao-agentes?style=flat)](LICENSE) [![CI](https://img.shields.io/github/actions/workflow/status/Rdraim/cooperacao-agentes/ci.yml?branch=main&label=CI&style=flat)](https://github.com/Rdraim/cooperacao-agentes/actions) [![Release](https://img.shields.io/github/v/release/Rdraim/cooperacao-agentes?style=flat)](https://github.com/Rdraim/cooperacao-agentes/releases) [![Git](https://img.shields.io/github/last-commit/Rdraim/cooperacao-agentes?label=Git&style=flat)](https://github.com/Rdraim/cooperacao-agentes/commits/main) [![Stars](https://img.shields.io/github/stars/Rdraim/cooperacao-agentes?style=social)](https://github.com/Rdraim/cooperacao-agentes/stargazers) [![Forks](https://img.shields.io/github/forks/Rdraim/cooperacao-agentes?style=social)](https://github.com/Rdraim/cooperacao-agentes/forks)
+<!-- public-badges:start -->
+[![license](assets/support/badge-license.svg)](LICENSE) [![CI](assets/support/badge-ci.svg)](https://github.com/Rdraim/cooperacao-agentes/actions) [![release](assets/support/badge-release.svg)](https://github.com/Rdraim/cooperacao-agentes/releases) [![Git](assets/support/badge-git.svg)](https://github.com/Rdraim/cooperacao-agentes/commits/main)
+<!-- public-badges:end -->
 
 <p>
   <a href="https://github.com/Rdraim/cooperacao-agentes/tree/main/examples"><img src="assets/support/action-0-en-us.svg" height="40" width="200" alt="View examples"></a>
