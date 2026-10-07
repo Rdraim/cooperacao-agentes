@@ -1,6 +1,22 @@
+<p align="right">
+  <a href="README.md"><img src="assets/support/flag-pt-br.svg" width="36" height="24" alt="Português brasileiro" title="Português brasileiro"></a>
+  <a href="README.en-US.md"><img src="assets/support/flag-en-us.svg" width="36" height="24" alt="English (United States)" title="English (United States)"></a>
+  <a href="README.es-AR.md"><img src="assets/support/flag-es-ar.svg" width="36" height="24" alt="Español (Argentina)" title="Español (Argentina)"></a>
+</p>
+
 # cooperacao-agentes
 
-**Language:** [PT-BR](README.md) · **EN-US** · [es-AR](README.es-AR.md)
+![cooperacao-agentes](assets/support/project-en-us.svg)
+
+[![MIT](https://img.shields.io/github/license/Rdraim/cooperacao-agentes?style=flat)](LICENSE) [![CI](https://img.shields.io/github/actions/workflow/status/Rdraim/cooperacao-agentes/ci.yml?branch=main&label=CI&style=flat)](https://github.com/Rdraim/cooperacao-agentes/actions) [![Release](https://img.shields.io/github/v/release/Rdraim/cooperacao-agentes?style=flat)](https://github.com/Rdraim/cooperacao-agentes/releases) [![Git](https://img.shields.io/github/last-commit/Rdraim/cooperacao-agentes?label=Git&style=flat)](https://github.com/Rdraim/cooperacao-agentes/commits/main) [![Stars](https://img.shields.io/github/stars/Rdraim/cooperacao-agentes?style=social)](https://github.com/Rdraim/cooperacao-agentes/stargazers) [![Forks](https://img.shields.io/github/forks/Rdraim/cooperacao-agentes?style=social)](https://github.com/Rdraim/cooperacao-agentes/forks)
+
+<p>
+  <a href="https://github.com/Rdraim/cooperacao-agentes/tree/main/examples"><img src="assets/support/action-0-en-us.svg" height="40" width="200" alt="View examples"></a>
+  <a href="https://github.dev/Rdraim/cooperacao-agentes"><img src="assets/support/action-1-en-us.svg" height="40" width="200" alt="Edit on GitHub"></a>
+  <a href="https://github.com/Rdraim/cooperacao-agentes/archive/refs/heads/main.zip"><img src="assets/support/action-2-en-us.svg" height="40" width="200" alt="Download code"></a>
+</p>
+
+
 
 A **method** (and a small tool) for several agents — AI or people — to collaborate through the **same Git repository** without stepping on each other. The repo is the shared memory; each task leaves a short **handoff note** ("passagem"). It is not an autonomous orchestrator: it is reviewable discipline.
 
@@ -61,7 +77,7 @@ Referencias:
 The module checks that a note has the minimum sections and a recognized state:
 
 ```js
-import { validarPassagem, MODELO } from 'cooperacao-agentes';
+import { validarPassagem, MODELO } from './src/passagem.js';
 
 const r = validarPassagem(text);
 // { ok, titulo, estado, faltando: [...], avisos: [...] }
@@ -89,3 +105,42 @@ node --test
 ## License
 
 MIT © Rodrigo Rodrigues
+
+## ☕ Buy me a coffee
+
+Did this project help you solve a problem, learn something new, or take your first steps in development? If you feel like supporting my work, a coffee is a kind way to say thank you.
+
+I’m **Rodrigo Rodrigues**, creator of **Nexus** and these open source projects. Your support helps me set aside time to improve the code, write clearer examples, and keep sharing what I learn.
+
+**Give any amount that feels right to you. Supporting is completely optional — the project remains free under the MIT license.**
+
+<p>
+  <a href="#support-via-pix"><img src="assets/support/pix-en-us.svg" width="190" height="44" alt="Support via Pix"></a>
+  <a href="https://github.com/Rdraim/cooperacao-agentes/issues/new?title=Feedback%3A%20this%20project%20helped%20me"><img src="assets/support/comment-en-us.svg" width="210" height="44" alt="Leave a comment"></a>
+</p>
+
+### Support via Pix
+
+In your banking app, scan the QR code or copy the Pix key below. Choose your amount and check the recipient details before confirming.
+
+<p align="center">
+  <img src="assets/support/pix-qr.png" width="260" alt="Original Pix QR code supplied by Rodrigo Rodrigues; the text key below is an alternative.">
+</p>
+
+**Pix key**
+
+```text
+8875a24e-44d1-4c91-b6bb-62c9f0070955
+```
+
+Pix is Brazil’s payment system. If your bank does not support it, you can still help by sharing the project, reporting a bug, improving the documentation, or leaving feedback.
+
+### Your feedback matters, too
+
+[Tell me how the project helped you](https://github.com/Rdraim/cooperacao-agentes/issues/new?title=Feedback%3A%20this%20project%20helped%20me). I’d love to hear what you built, what you learned, and what could be clearer for someone just starting out.
+
+A comment is welcome with or without a donation. Please keep payment receipts, personal details, credentials and private user data out of public Issues.
+
+---
+
+**Thank you for supporting my work and helping me keep building and sharing. ❤️**

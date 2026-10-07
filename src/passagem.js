@@ -13,10 +13,10 @@
    ============================================================================ */
 
 /** Estados reconhecidos de uma tarefa. */
-export const ESTADOS = ['em andamento', 'concluido', 'interrompido', 'bloqueado'];
+export const ESTADOS = Object.freeze(['em andamento', 'concluido', 'interrompido', 'bloqueado']);
 
 /** Seções mínimas de uma passagem (o rótulo que inicia a linha). */
-export const CAMPOS = [
+export const CAMPOS = Object.freeze([
   'Data e agente',
   'Estado',
   'Objetivo e autorizacao',
@@ -28,7 +28,7 @@ export const CAMPOS = [
   'Estado do servico / publicacao',
   'Proximo passo concreto',
   'Referencias',
-];
+]);
 
 /** Modelo pronto para copiar. */
 export const MODELO = `# Assunto da tarefa
@@ -56,9 +56,17 @@ export function analisarPassagem(texto) {
   const titulo = (linhas.find((l) => l.trim().startsWith('#')) || '').replace(/^#+\s*/, '').trim();
 
   const campos = {};
+  const duplicados = [];
   for (const rotulo of CAMPOS) {
     const alvo = semAcento(rotulo);
-    const linha = linhas.find((l) => semAcento(l).startsWith(alvo));
+    const correspondencias = linhas.filter((l) => {
+      const pos = l.indexOf(':');
+      if (pos < 0) return false;
+      const chave = semAcento(l.slice(0, pos)).replace(/\s*\([^)]*\)$/, '');
+      return chave === alvo;
+    });
+    if (correspondencias.length > 1) duplicados.push(rotulo);
+    const linha = correspondencias[0];
     if (linha) {
       const valor = linha.slice(linha.indexOf(':') + 1).trim();
       campos[rotulo] = valor;
@@ -67,7 +75,7 @@ export function analisarPassagem(texto) {
 
   const estadoBruto = semAcento(campos['Estado'] || '');
   const estado = ESTADOS.find((e) => estadoBruto === e) || null;
-  return { titulo, campos, estado };
+  return { titulo, campos, estado, duplicados };
 }
 
 /**
@@ -75,9 +83,9 @@ export function analisarPassagem(texto) {
  * @returns {{ ok: boolean, titulo: string, estado: string|null, faltando: string[], avisos: string[] }}
  */
 export function validarPassagem(texto) {
-  const { titulo, campos, estado } = analisarPassagem(texto);
+  const { titulo, campos, estado, duplicados } = analisarPassagem(texto);
   const faltando = [];
-  const avisos = [];
+  const avisos = duplicados.map(c => 'campo duplicado: ' + c);
 
   if (!titulo) avisos.push('sem título (linha iniciada por "#")');
   for (const rotulo of CAMPOS) {
