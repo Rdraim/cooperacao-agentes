@@ -9,7 +9,7 @@
 ![cooperacao-agentes](assets/support/project-en-us.svg)
 
 <!-- public-badges:start -->
-[![license](assets/support/badge-license.svg)](LICENSE) [![CI](assets/support/badge-ci.svg)](https://github.com/Rdraim/cooperacao-agentes/actions) [![release](assets/support/badge-release.svg)](https://github.com/Rdraim/cooperacao-agentes/releases)
+[![license](assets/support/badge-license.svg)](LICENSE) [![CI](assets/support/badge-ci.svg)](https://github.com/Rdraim/cooperacao-agentes/actions) [![release](assets/support/badge-release.svg)](https://github.com/Rdraim/cooperacao-agentes/releases) [![Git](assets/support/badge-git.svg)](https://github.com/Rdraim/cooperacao-agentes/commits/main)
 <!-- public-badges:end -->
 
 <p>
