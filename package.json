@@ -1,0 +1,19 @@
+{
+  "name": "cooperacao-agentes",
+  "version": "1.0.0",
+  "description": "Método e validador de 'passagem' (handoff) para agentes que colaboram pelo mesmo repositório Git: divisão de escopo, evidências e retomada. Material didático + ferramenta. Zero dependências.",
+  "type": "module",
+  "main": "src/passagem.js",
+  "exports": "./src/passagem.js",
+  "files": ["src", "README.md", "README.en-US.md", "README.es-AR.md", "LICENSE"],
+  "scripts": {
+    "test": "node --test"
+  },
+  "keywords": ["handoff", "passagem", "agentes", "ia", "git", "cooperacao", "pt-br"],
+  "author": "Rodrigo Rodrigues",
+  "license": "MIT",
+  "repository": { "type": "git", "url": "git+https://github.com/techrodrigo21-ux/cooperacao-agentes.git" },
+  "bugs": { "url": "https://github.com/techrodrigo21-ux/cooperacao-agentes/issues" },
+  "homepage": "https://github.com/techrodrigo21-ux/cooperacao-agentes#readme",
+  "engines": { "node": ">=18" }
+}
